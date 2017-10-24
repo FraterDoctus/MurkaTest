@@ -1,0 +1,10 @@
+Library/
+Temp/
+.idea/
+.idea.3dlogo-creator/
+*.csproj
+*.unityproj
+*.sln
+*.userprefs
+*.pidb
+.DS_Store
