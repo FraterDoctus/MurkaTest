@@ -45,7 +45,7 @@ namespace Figure.Drawer
 
             if (_isDrawing)
             {
-                _drawPolygon.AddNextVertex(Camera.main.ViewportToWorldPoint(Input.mousePosition));
+                _drawPolygon.AddNextVertex(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
                 if (!Input.GetMouseButton(0))
                 {

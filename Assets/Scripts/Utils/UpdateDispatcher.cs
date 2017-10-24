@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace Utils
 {
-    public class UpdateDispatcher : View
+    public class UpdateDispatcher
     {
         public UpdateDispacherBehaviour UpdateBehaviour
         {
