@@ -1,4 +1,5 @@
 ﻿using Commands;
+using Figure;
 using UI;
 using UnityEngine;
 
@@ -13,6 +14,8 @@ public class MainContext : SignalContext
         base.mapBindings();
 
         injectionBinder.Bind<IUiController>().To<CanvasUiController>().ToSingleton();
+        injectionBinder.Bind<IFiguresManager>().To<ResourcesFiguresManager>().ToSingleton();
+        injectionBinder.Bind<GameController>().ToSingleton();
         
         commandBinder.Bind<AppStartSignal>().To<AppStartCommand>().Once();
         commandBinder.Bind<StartGameSignal>().To<StartGameCommand>().Once();
