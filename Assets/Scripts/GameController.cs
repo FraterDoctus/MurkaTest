@@ -1,5 +1,7 @@
 ﻿using System;
 using Figure;
+using Figure.Drawer;
+using Figure.Visualizer;
 using UnityEngine;
 
 public class GameController
@@ -9,10 +11,15 @@ public class GameController
     [Inject]
     public IFiguresManager FiguresManager { get; private set; }
 
+    [Inject]
+    public IPolygonVisualizer PolygonVisualizer { get; private set; }
+
+    [Inject]
+    public IDrawer Drawer { get; private set; }
+
     public void StartGame()
     {
-        //TODO Enable drawing ability
-        Debug.Log("TODO HERE!");
+        Drawer.StartDrawing();
         
         LoadNextFigure();
     }
@@ -25,9 +32,7 @@ public class GameController
     public void LoadNextFigure()
     {
         CurrentFigure = FiguresManager.GetNextFigure();
-        Debug.Log("Next Figure - " + CurrentFigure.name);
         
-        //TODO Draw figure
-        Debug.Log("TODO HERE!");
+        PolygonVisualizer.DrawTemplatePolygon(CurrentFigure.Polygon);
     }
 }
