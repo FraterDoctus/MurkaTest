@@ -4,5 +4,6 @@
     {
         FigureData GetRandomFigure();
         FigureData GetNextFigure();
+        void StartFromBegining();
     }
 }

@@ -8,7 +8,7 @@ namespace Commands
     {
         [Inject]
         public IUiController UiController { get; private set; }
-
+        
         public override void Execute()
         {   
             UiController.ShowStartPanel();

@@ -945,7 +945,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 861039323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 834.1268, y: 0, z: 0}
+  m_LocalPosition: {x: 834.89056, y: 0, z: 0}
   m_LocalScale: {x: 0.9999882, y: 0.9999882, z: 0.9999882}
   m_Children:
   - {fileID: 197040965}
@@ -1006,7 +1006,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 883279553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 490.49152, z: 0}
+  m_LocalPosition: {x: 0, y: 490.06165, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1793942018}
@@ -1435,8 +1435,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1228284041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 244, y: 137.5, z: 0}
-  m_LocalScale: {x: 0.25439808, y: 0.25439808, z: 0.25439808}
+  m_LocalPosition: {x: 243.5, y: 137, z: 0}
+  m_LocalScale: {x: 0.25367475, y: 0.25367475, z: 0.25367475}
   m_Children:
   - {fileID: 796065566}
   m_Father: {fileID: 0}
@@ -1524,7 +1524,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1254743345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -834.1268, y: 0, z: 0}
+  m_LocalPosition: {x: -834.89056, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 902956149}
@@ -2159,6 +2159,7 @@ MonoBehaviour:
   RetryButton: {fileID: 782229665}
   TimeText: {fileID: 902956150}
   ScoreText: {fileID: 197040966}
+  FinaleScoreText: {fileID: 1443957283}
 --- !u!1 &2117397285
 GameObject:
   m_ObjectHideFlags: 0

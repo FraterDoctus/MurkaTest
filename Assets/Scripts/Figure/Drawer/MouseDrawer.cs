@@ -55,10 +55,5 @@ namespace Figure.Drawer
             }
                 
         }
-
-        private void AddNextVertex()
-        {
-            
-        }
     }
 }

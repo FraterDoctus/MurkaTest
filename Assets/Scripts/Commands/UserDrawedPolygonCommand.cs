@@ -17,16 +17,16 @@ namespace Commands
 		[Inject]
 		public GameController GameController { get; private set; }
 
+		[Inject]
+		public IncreaseScoreSignal IncreaseScoreSignal { get; private set; }
+
 		public override void Execute()
 		{
 			if (FigureComparer.IsFiguresEqual(GameController.CurrentFigure.Polygon, DrawedPolygon,
 				GameController.CurrentFigure.MaxPassingLen))
 			{
 				GameController.LoadNextFigure();
-				
-				//TODO Add score
-				//TODO Update Timer
-				Debug.Log("TODO HERE! Score + Timer");
+				IncreaseScoreSignal.Dispatch();
 			}
 		}
 	}

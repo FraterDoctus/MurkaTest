@@ -6,7 +6,10 @@ namespace UI
     {
         [Inject]
         public StartGameSignal StartGameSignal { get; private set; }
-        
+
+        [Inject]
+        public RetrySignal RetrySignal { get; private set; }
+
 
         public CanvasView CanvasView
         {
@@ -42,29 +45,35 @@ namespace UI
             StartGameSignal.Dispatch();
         }
 
-        public void ShowGameOverPanel()
+        public void ShowGameOverPanel(int finaleScore)
         {
-            throw new System.NotImplementedException();
+            CanvasView.FinaleScoreText.text = finaleScore.ToString();
+            CanvasView.GameOverPanelAnimator.SetTrigger("ShowPanel");
         }
 
         public void HideGameOverPanel()
         {
-            throw new System.NotImplementedException();
+            CanvasView.GameOverPanelAnimator.SetTrigger("HidePanel");
         }
 
         public void RetryBtnPressed()
         {
-            throw new System.NotImplementedException();
+            RetrySignal.Dispatch();
         }
 
         public void UpdateTime(float time)
         {
-            throw new System.NotImplementedException();
+            CanvasView.TimeText.text = SecondsToString(time);
         }
 
         public void UpdateScore(int score)
         {
-            throw new System.NotImplementedException();
+            CanvasView.ScoreText.text = score.ToString();
+        }
+        
+        private static string SecondsToString(float time)
+        {
+            return (int) (time / 60) + ":" + (int) (time % 60);
         }
     }
 }

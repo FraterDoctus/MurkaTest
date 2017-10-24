@@ -45,5 +45,10 @@ namespace Figure
         {
             return Figures[_nextFigureNumber++ % Figures.Count];
         }
+
+        public void StartFromBegining()
+        {
+            _nextFigureNumber = 0;
+        }
     }
 }
