@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Utils
+namespace Utils.Editor
 {
 	public static class ScriptableObjectUtility
 	{
