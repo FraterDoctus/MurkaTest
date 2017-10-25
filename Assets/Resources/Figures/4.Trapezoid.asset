@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a81277edab3dbc4b9d3cf6583169813, type: 3}
-  m_Name: 3.Parallelogram
+  m_Name: 4.Trapezoid
   m_EditorClassIdentifier: 
   Polygon:
     Vertices:
-    - {x: -25, y: -2}
+    - {x: -3, y: -2}
     - {x: -2, y: 2}
-    - {x: 2.5, y: 2}
-    - {x: 2, y: -2}
+    - {x: 2, y: 2}
+    - {x: 3, y: -2}
   MaxPassingLen: 0.5
