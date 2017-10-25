@@ -11,6 +11,9 @@ namespace Figure.Drawer
 
         [Inject]
         public UserDrawedPolygonSignal UserDrawedPolygonSignal { get; private set; }
+        
+        [Inject]
+        public StartDrawSignal StartDrawSignal { get; private set; }
 
         private bool _drawingEnable = false;
         private Polygon _drawPolygon = null;
@@ -41,6 +44,7 @@ namespace Figure.Drawer
             {
                 _drawPolygon = new Polygon();
                 _isDrawing = true;
+                StartDrawSignal.Dispatch();
             }
 
             if (_isDrawing)

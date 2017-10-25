@@ -1,6 +1,7 @@
 ﻿using Figure;
 using Figure.FiguresComparer;
 using FigureRecognizing;
+using MouseParticle;
 using strange.extensions.command.impl;
 using UnityEngine;
 
@@ -20,8 +21,13 @@ namespace Commands
 		[Inject]
 		public IncreaseScoreSignal IncreaseScoreSignal { get; private set; }
 
+		[Inject]
+		public IMouseParticle MouseParticle { get; private set; }
+		
 		public override void Execute()
 		{
+			MouseParticle.DestroyMouseParticle();
+			
 			if (FigureComparer.IsFiguresEqual(GameController.CurrentFigure.Polygon, DrawedPolygon,
 				GameController.CurrentFigure.MaxPassingLen))
 			{

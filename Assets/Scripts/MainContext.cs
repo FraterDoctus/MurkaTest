@@ -3,10 +3,12 @@ using Figure;
 using Figure.Drawer;
 using Figure.FiguresComparer;
 using Figure.Visualizer;
+using MouseParticle;
 using Timer;
 using UI;
 using UnityEngine;
 using Utils;
+using Utils.Executor;
 
 public class MainContext : SignalContext
 {
@@ -27,6 +29,8 @@ public class MainContext : SignalContext
         injectionBinder.Bind<IFigureComparer>().To<RadialFigureComparer>().ToSingleton();
         injectionBinder.Bind<ScoreController>().ToSingleton();
         injectionBinder.Bind<ITimer>().To<UpdateTimer>().ToSingleton();
+        injectionBinder.Bind<IMouseParticle>().To<ResourcesMouseParticle>().ToSingleton();
+        injectionBinder.Bind<IExecutor>().To<CoroutineExecutor>().ToSingleton();
         
         commandBinder.Bind<AppStartSignal>().To<AppStartCommand>().Once();
         commandBinder.Bind<StartGameSignal>().To<StartGameCommand>();
@@ -35,5 +39,6 @@ public class MainContext : SignalContext
         commandBinder.Bind<GameOverSignal>().To<GameOverCommand>();
         commandBinder.Bind<RetrySignal>().To<RetryCommand>();
         commandBinder.Bind<UpdateTimeSignal>().To<UpdateTimeCommand>();
+        commandBinder.Bind<StartDrawSignal>().To<StartDrawCommand>();
     }
 }
