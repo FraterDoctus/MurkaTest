@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a81277edab3dbc4b9d3cf6583169813, type: 3}
+  m_Name: 3.Parallelogram
+  m_EditorClassIdentifier: 
+  Polygon:
+    Vertices:
+    - {x: -3, y: -2}
+    - {x: -2, y: 2}
+    - {x: 3, y: 2}
+    - {x: 2, y: -2}
+  MaxPassingLen: 0.5

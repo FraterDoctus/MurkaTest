@@ -12,6 +12,7 @@ namespace UI
         [NotNull] public Button RetryButton;
         [NotNull] public Text TimeText;
         [NotNull] public Text ScoreText;
+        [NotNull] public Text FinaleScoreText;
 
         [Inject]
         public IUiController UiController { get; private set; }

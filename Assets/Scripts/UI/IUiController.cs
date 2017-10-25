@@ -5,7 +5,7 @@
         void ShowStartPanel();
         void HideStartPanel();
         void StartGameBtnPressed();
-        void ShowGameOverPanel();
+        void ShowGameOverPanel(int finaleScore);
         void HideGameOverPanel();
         void RetryBtnPressed();
         void UpdateTime(float time);

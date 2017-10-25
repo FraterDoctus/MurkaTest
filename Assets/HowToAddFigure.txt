@@ -1,0 +1,9 @@
+To add new figure you need to:
+1. Go to "Resources/Figures" folder. 
+2. Duplicate one of already created figure.
+3. Go to "Polygon->Vertices" in figure settings and set vertices.
+4. Change "Max Passing Len" if needed.
+
+P.S.
+- Be aware, you need to add vertices in right order
+- Figures will appear in the game by their name in the folder.

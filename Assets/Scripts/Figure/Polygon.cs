@@ -39,7 +39,7 @@ namespace FigureRecognizing
 
 		#region > Initialization
 
-		public void ReinitializeValues()
+		private void ReinitializeCalculatableValues()
 		{
 			_bounds = null;
 			_center = null;
@@ -74,7 +74,7 @@ namespace FigureRecognizing
 			Vertices.Add (vertex);
 
 			//new vertex can change min/max bounds
-			ReinitializeValues();
+			ReinitializeCalculatableValues();
 		}
 
 		public void Scale(float scale)
@@ -85,7 +85,7 @@ namespace FigureRecognizing
 				Vertices[i] += v.normalized * (v.magnitude * (scale - 1));
 			}
         
-			ReinitializeValues();
+			ReinitializeCalculatableValues();
 		}
 
 		public void Translate(Vector2 offset)
@@ -95,9 +95,16 @@ namespace FigureRecognizing
 				Vertices[i] -= offset;
 			}
         
-			ReinitializeValues();
+			ReinitializeCalculatableValues();
 		}
 	
+		/// <summary>
+		/// Gives all intersactions with line
+		/// </summary>
+		/// <param name="a">First point of line</param>
+		/// <param name="b">Second point of line</param>
+		/// <param name="circular">Is last point of polygon connected to first</param>
+		/// <returns>All polygon intersactions with line</returns>
 		public List<Vector2> GetIntersections(Vector2 a, Vector2 b, bool circular = false)
 		{
 			var intersections = new List<Vector2>();
@@ -122,7 +129,8 @@ namespace FigureRecognizing
 
 		private bool PointInSection(Vector2 a, Vector2 b, Vector2 point)
 		{
-			//don't include point if it's in end point of checking section
+			//Don't include point if it's in end point of checking section
+			//Because same point could be added twice
 			if (point == b)
 				return false;
 		

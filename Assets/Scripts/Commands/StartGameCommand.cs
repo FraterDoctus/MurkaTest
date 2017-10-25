@@ -9,11 +9,13 @@ namespace Commands
         [Inject]
         public IUiController UiController { get; private set; }
 
+        [Inject]
+        public GameController GameController { get; private set; }
+
         public override void Execute()
         {
             UiController.HideStartPanel();
-            //TODO Add start game
-            Debug.Log("TODO HERE!!! Start Game");
+            GameController.StartGame();
         }
     }
 }
